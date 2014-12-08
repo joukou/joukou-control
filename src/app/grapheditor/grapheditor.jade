@@ -1,0 +1,48 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+.graph-editor
+  md-sidenav#menu.md-sidenav-left.md-whiteframe-z1.joukou-graph-circles-menu(is-open='state.leftMenu' component-id="left" layout="vertical")
+    .content(layout="vertical" flex)
+      div
+        h2 Circles
+      div
+        md-input-group#circleSearchGroup
+          label(for="circleSearch" layout="horizontal") Search
+            #loading-wrapper(ng-if="circleSearchLoading")
+              #loading &nbsp;
+          md-input#circleSearch(
+            ng-model="circleSearchTerm"
+            ng-change="circleSearchChange()"
+          )
+      div(flex)
+        .list-group()
+          a.list-group-item(ng-repeat='circle in circles' ng-click='onCircleSelected(circle)' ) {{circle.props.name}}
+      #left-hide-button-wrapper(layout="horizontal" layout-align="end" ng-click="closeLeftMenu()")
+        #hide-button.control-button
+          i.fa.fa-angle-double-left
+          | &nbsp;Hide Circles
+  #left-show-button-wrapper(ng-show="!state.leftMenu")
+    #show-button.control-button(ng-click="openLeftMenu()")
+      | Show Circles&nbsp;
+      i.fa.fa-angle-double-right
+  #right-button-wrapper(layout="horizontal" layout-align="end")
+    #start-button.control-button(ng-show="!state.running" ng-click="startGraph()")
+      i.fa.fa-play
+      | &nbsp;Start
+    #stop-button.control-button(ng-show="state.running" ng-click="stopGraph()")
+      i.fa.fa-pause
+      | &nbsp;Stop
+
+
+  joukou-graph-editor#joukouGraphEditor(graphdata='{{graphData.props}}')

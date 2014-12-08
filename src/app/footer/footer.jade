@@ -1,0 +1,131 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+.clear-both
+footer(ng-controller="FooterCtrl", ng-show=' !hideFooter ')
+  ul.list-inline.social-links
+    li
+      a.btn.btn-link(href='tel:+6421456420')
+        i.fa.fa-mobile-phone
+    li
+      a.btn.btn-link(href='tel:+6492154540')
+        i.fa.fa-phone
+    li
+      a.btn.btn-link(href='mailto:sales@joukou.com')
+        i.fa.fa-envelope
+    li
+      a.btn.btn-link(href='https://twitter.com/joukouplatform')
+        i.fa.fa-twitter
+    li
+      a.btn.btn-link(href='https://www.facebook.com/pages/Joukou/121817744562076')
+        i.fa.fa-facebook
+    li
+      a.btn.btn-link(href='https://github.com/joukou')
+        i.fa.fa-github
+    li
+      a.btn.btn-link(href='http://www.linkedin.com/company/joukou')
+        i.fa.fa-linkedin
+  .padding-4-x(id='footer-menu')
+    .col-seven
+      ul.footer-list-group
+        li
+          a.header(ui-sref='product')
+            | Product
+        li
+          a.item(href='http://youturn.co.nz')
+            | Demo
+        li
+          a.item(href="https://apidoc.joukou.com" target="_blank")
+            | API Documentation
+        li
+          a.item(ui-sref='solutions')
+            | Solutions
+        //
+          li
+            a.item(href="")
+              | Functions
+    .col-seven
+      ul.footer-list-group
+        li
+          a.header(ui-sref="solutions") 
+            | Solutions
+        li
+          a.item(ui-sref='solutions-business')
+            | Business
+        li
+          a.item(ui-sref='solutions-developer')
+            | Developer
+        li
+          a.item(ui-sref='solutions-it')
+            | IT
+    .col-seven
+      ul.footer-list-group
+        li
+          a.header(ui-sref="marketplace")
+            | Marketplace
+        li
+          //a.item(ui-sref='marketplace-connectors')
+          a.item(ui-sref='marketplace')
+            | Connectors
+        li
+          //a.item(ui-sref='marketplace-developers')
+          a.item(ui-sref='marketplace')
+            | Developers
+        li
+          //a.item(ui-sref='marketplace-partners')
+          a.item(ui-sref='marketplace')
+            | Partners
+    .col-seven
+      ul.footer-list-group
+        li
+          a.header(ui-sref="pricing")
+            | Pricing
+    //
+      .col-seven
+        ul.footer-list-group
+          li
+            a.header(ui-sref="pricing") 
+              | Blog
+    .col-seven
+      ul.footer-list-group
+        //
+          li
+            a.header(ui-sref="company") 
+              | Company
+        li
+          //a.item(ui-sref='contact')
+          a.header(ui-sref='contact')
+            | Contact Us
+        //
+          li
+            a.item(ui-sref='home-what')
+              | Team
+          li
+            a.item(href='')
+              | Support
+          li
+            a.item(href='')
+              | Carrers
+    .col-seven(ng-if="!disableSignIn")
+      ul.footer-list-group
+        li
+          a.header(ui-sref='signup' ng-show='!authenticated')
+            | Sign up
+          a.header(ui-sref='persona' ng-show='authenticated')
+            | Persona
+  .copyright
+    .col-xs-12
+      p
+        | Copyright © 2014 Joukou Limited. All rights reserved.
+        | &nbsp;
+        a.lead(ui-sref='privacy', target='_blank') Privacy policy

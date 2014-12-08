@@ -1,0 +1,54 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+div(id='picture-header')
+  .jumbotron.header-image(style="background-image:url('images/sign-up.jpg')")
+    .container
+      .row
+        div.col-sm-offset-1.margin-top-8
+          | &nbsp;
+  div.container-seb-padding-119.header-nav-bottom
+    div.contact-help-search
+      img.img-24(src='images/contact button.png' ui-sref='contact')
+      //
+        img.img-24(src='images/help button.png')
+        img.img-24(src='images/search button.png')
+    div.first-column(ng-click="scrollTo('')")
+      | &nbsp;
+      //
+        img.img-39(src='images/push down button.png')
+    div.language
+      | &nbsp;
+      //
+        img.img-24(src='images/languages button.png')
+section.signin
+  .container
+    .row
+      .col-xs-12.text-center
+        h3 Sign Up
+    .row
+      .col-sm-6.col-sm-offset-3
+        form.col-xs-12(name='signupForm' ng-submit='signup()' role='form' novalidate)
+          .form-group
+            input.form-control(ng-disabled="cannotAccessApi" type='email' name='email' placeholder='Email' ng-model='credentials.email' required)
+          .form-group
+            input.form-control(ng-disabled="cannotAccessApi" type='password' name='password' placeholder='Password' ng-model='credentials.password' required ng-minlength='6')
+          .form-group
+            button.btn.btn-info(type='submit' ng-disabled="cannotAccessApi || showError()") Sign Up
+          .form-group(ng-show='showError()' )
+            joukou-error-dialog(dialogwidth='100%' message='{{getErrorMessage()}}' top)
+  .container(ng-show='showErrorMessage')
+      .col-sm-6.col-sm-offset-3
+        .alert.alert-danger
+          strong Opps!
+            | Something went wrong. Please try again or alternatively email us at <a href="mailto:info@joukou.co">info@joukou.co</a>.

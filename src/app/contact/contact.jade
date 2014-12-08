@@ -1,0 +1,116 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+div(id='picture-header')
+  .jumbotron.header-image.contact(style="background-image:url('images/Photo header Contact.png')")
+    .container
+      .row
+        | &nbsp;
+  div.container-seb-padding-119.header-nav-bottom
+    div.contact-help-search
+      | &nbsp;
+      //
+        img.img-24(src='images/contact button.png')
+        img.img-24(src='images/help button.png')
+        img.img-24(src='images/search button.png')
+    div.first-column(ng-click="scrollTo('contact-info')" ui-sref='contact')
+      img.img-39(src='images/push down button.png')
+    div.language
+      | &nbsp;
+      //
+        img.img-24(src='images/languages button.png')
+section.contact(id='contact-info')
+  .container-seb-padding-119
+    .col-xs-12.col-sm-12.col-md-4.col-lg-4.sm-text-center-max
+      p
+        | Joukou Ltd
+        br
+        | 3A / 1 Nelson Street
+        br
+        | Auckland 1010
+        br
+        | New Zealand.col-sm-4
+    .col-xs-12.col-sm-6.col-md-4.col-lg-4.sm-text-center-max
+      ul.list-group.social-links
+        li.list-group-item
+          a.btn.btn-link(href='tel:+6421456420')
+            i.fa.fa-mobile-phone
+          a.pad-1(href='tel:+6421456420')
+            |+ 64 21 456 420
+        li.list-group-item
+          a.btn.btn-link(href='tel:+6492154540')
+            i.fa.fa-phone
+          a.pad-1(href='tel:+6492154540')
+            | + 64 9 215 4540
+        li.list-group-item
+          a.btn.btn-link(href='mailto:sales@joukou.com')
+            i.fa.fa-envelope
+          a.pad-1(href='mailto:sales@joukou.com')
+            | sales@joukou.com
+        li.list-group-item
+          a.btn.btn-link(href='http://www.linkedin.com/company/joukou')
+            i.fa.fa-linkedin
+          a.pad-1(href='http://www.linkedin.com/company/joukou')
+            | joukou ltd
+    .col-xs-12.col-sm-6.col-md-4.col-lg-4.sm-text-center-max
+      ul.list-group.social-links
+        li.list-group-item
+          a.btn.btn-link(href='https://twitter.com/joukouplatform')
+            i.fa.fa-twitter
+          a.pad-1(href='https://twitter.com/joukouplatform')
+            | @joukouplatform
+        li.list-group-item
+          a.btn.btn-link(href='https://www.facebook.com/pages/Joukou/121817744562076')
+            i.fa.fa-facebook
+          a.pad-1(href='https://www.facebook.com/pages/Joukou/121817744562076')
+            | joukou
+        li.list-group-item
+          a.btn.btn-link(href='https://github.com/joukou')
+            i.fa.fa-github
+          a.pad-1(href='https://github.com/joukou')
+            | github joukou
+section.contact.clear-fix(id='contact-form')
+  .row(ng-show='submitted && contactForm.$dirty && contactForm.$invalid')
+    .col-xs-12.col-sm-6.col-sm-offset-3.alerts.build-border
+      .alert.alert-warning
+        ul
+          li(ng-show='contactForm.email.$error.required')
+            | Please enter an&nbsp;
+            strong email address
+          li(ng-show='contactForm.email.$error.email')
+            | Please enter a valid&nbsp;
+            strong email address
+          li(ng-show='contactForm.message.$error.required')
+            | Please enter a&nbsp;
+            strong message
+  .container(ng-show='showForm')
+    .col-sm-6.col-sm-offset-3
+      form.sign-up-form(name='contactForm' role='form' ng-submit='executeContact()' novalidate)
+        .form-group
+          input.form-control(placeholder='Name' ng-model='contact.name')
+        .form-group
+          input.form-control(name='email' type='email' placeholder='Email' ng-model='contact.email' required)
+        .form-group
+          textarea.form-control(name='message' rows='6', placeholder='Message' ng-model='contact.message' required)
+        .form-group
+          button.btn.btn-info(type='submit' style='width:100%') Send
+  .container(ng-show='showSuccessMessage')
+    .col-sm-6.col-sm-offset-3
+      .alert.alert-success
+        strong Thanks for your interest in Joukou!
+          | We will contact you as soon as possible.
+  .container(ng-show='showErrorMessage')
+    .col-sm-6.col-sm-offset-3
+      .alert.alert-danger
+        strong Opps!
+          | Something went wrong. Please try again or alternatively email us at <a href="mailto:info@joukou.co">info@joukou.co</a>.

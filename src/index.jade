@@ -1,0 +1,36 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+doctype html
+html(lang='en' ng-app='ngJoukou' ng-controller='AppCtrl' ng-strict-di)
+  head
+    meta(name="description" content="The Zen of Data. Liberate your Data with an effective integration solution that improves business processes and creates value.")
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title(ng-bind='pageTitle')
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+    //link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type='text/css')
+    link(href="//fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type='text/css')
+  body
+    div(ng-include="'app/header/header.html'")
+    div(ui-view='main' id='main')
+    div(ng-include="'app/footer/footer.html'")
+    script(type="text/javascript").
+      var _gaq = [['_setAccount', 'UA-41911221-1'], ['_trackPageview']];
+      (function(d, t) {
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+      }(document, 'script'))

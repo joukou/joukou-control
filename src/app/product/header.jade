@@ -1,0 +1,36 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+//
+  joukou-header-bar(
+    htitle="Liberate your Data" 
+    imagesrc="images/header product.jpg",
+    jumboclass="col-sm-offset-2 col-sm-6")
+div(id='picture-header')
+  .jumbotron.header-image(style="background-image:url('images/header product.jpg')")
+    .container
+      .row
+        div.col-sm-offset-1.margin-top-8
+          | &nbsp;
+  div.container-seb-padding-119.header-nav-bottom
+    div.contact-help-search
+      img.img-24(src='images/contact button.png' ui-sref='contact')
+      //
+        img.img-24(src='images/help button.png')
+        img.img-24(src='images/search button.png')
+    div.first-column(ng-click="scrollTo('product-row-business')")
+      img.img-39(src='images/push down button.png')
+    div.language
+      | &nbsp;
+      //
+        img.img-24(src='images/languages button.png')

@@ -1,0 +1,17 @@
+.circle
+.dockercfg.template
+.dockerignore
+.git
+.gitignore
+README.md
+bower.json
+bower_components
+circle.yml
+coffeelint.json
+gulpfile.coffee
+gulpfile.js
+node_modules
+package.gif
+package.json
+src
+test

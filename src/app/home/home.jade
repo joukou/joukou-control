@@ -1,0 +1,47 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+div(ng-include="'app/home/header.html'")
+.container-seb-margin-184.text-group(id="home-row-data")
+  .center-me
+    h1 Liberate your data
+    | Gives you 100% control.
+    br
+    | You convert, aggregate, filter, clean, merge
+    br
+    | and verify your Data in a very visual way.
+  .next-image(ui-sref="product")
+.container-seb-padding-184.text-group.home-solutions.background-image(id="home-row-solutions")
+  .center-me
+    .col-sm-offset-7.col-sm-5
+      h1 Your data, Your solution
+      | Improve  processes, integrate your applications
+      br
+      | mobilise and synchronise your data.
+  .next-image.light(ui-sref="solutions")
+.container-seb-margin-184.text-group.home-marketplace(id="home-row-marketplace")
+  .center-me
+    h1 You are part of the community
+    | It is more than a platform.
+    br
+    | We are building a community and
+    br
+    | you are the first step.
+  .next-image(ui-sref="marketplace")
+.container-seb-padding-184.text-group.home-demo.background-image(id="home-row-signup")
+  .center-me(style='text-align:center')
+    h1 Try it and save money
+    button.btn.btn-info.col-xs-10.col-sm-8.col-md-4.col-lg-3(ui-sref='signup' ng-if="!disableSignIn")
+      | Sign up
+    button.btn.btn-info.col-xs-10.col-sm-8.col-md-4.col-lg-3(ui-sref='contact' ng-if="disableSignIn")
+      | Contact us

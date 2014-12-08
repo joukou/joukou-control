@@ -1,0 +1,40 @@
+# Copyright 2014 Joukou Ltd
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+scripts:
+  - ../../bower_components/webcomponentsjs/webcomponents.min.js
+  - ../../bower_components/react/react.js
+  - noflo.js
+  - ../../bower_components/klay-js/klay.js
+  - ../../bower_components/hammerjs/hammer.js
+  - ../../bower_components/uri.js/src/URI.js
+  - ../../bower_components/uri.js/src/URITemplate.js
+  - ../../bower_components/q/q.js
+  - ../../bower_components/jquery/jquery.js
+  - ../../bower_components/angular/angular.js
+  - ../../bower_components/hyperagent/dist/hyperagent.js
+  - ../../bower_components/angular-resource/angular-resource.js
+  - ../../bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js
+  - ../../bower_components/angular-ui-router/release/angular-ui-router.js
+  - ../../bower_components/angular-ui-router.stateHelper/statehelper.min.js
+  - ../../bower_components/angular-bind-polymer/angular_bind_polymer.js
+  - ../../bower_components/angular-base64/angular-base64.js
+  - ../../bower_components/bootstrap-ui/ui-bootstrap-tpls.js
+  - ../../bower_components/lodash/dist/lodash.js
+  - ../../bower_components/angular-animate/angular-animate.js
+  - ../../bower_components/angular-aria/angular-aria.js
+  - ../../bower_components/angular-material/angular-material.js
+  - ../../bower_components/routes/dist/routes.js
+styles:
+  - ../../bower_components/angular-material/angular-material.css
+  - ../../bower_components/angular-material/themes/blue-theme.css

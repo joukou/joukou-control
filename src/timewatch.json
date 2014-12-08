@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "name": "NoFlo"
+  },
+  "exports": [],
+  "processes": {
+    "makeTimezoneAngle": {
+      "component": "math/Divide",
+      "metadata": {
+        "label": "Math Divide",
+        "x": 310,
+        "y": 200
+      }
+    }
+  },
+  "connections": [
+    {
+      "data": "-720",
+      "tgt": {
+        "process": "makeTimezoneAngle",
+        "port": "divisor"
+      }
+    }
+  ]
+}

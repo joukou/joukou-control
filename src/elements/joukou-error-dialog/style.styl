@@ -1,0 +1,131 @@
+/**
+ * Copyright 2014 Joukou Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+//@import '../../../bower_components/font-awesome-stylus/stylus/index'
+//@import "../../../bower_components/font-awesome-stylus/stylus/nib"
+@import "../../../bower_components/font-awesome-stylus/stylus/variables"
+@import "../../../bower_components/font-awesome-stylus/stylus/mixins"
+@import "../../../bower_components/font-awesome-stylus/stylus/path"
+@import "../../../bower_components/font-awesome-stylus/stylus/core"
+//@import "../../../bower_components/font-awesome-stylus/stylus/larger"
+//@import "../../../bower_components/font-awesome-stylus/stylus/fixed-width"
+//@import "../../../bower_components/font-awesome-stylus/stylus/list"
+//@import "../../../bower_components/font-awesome-stylus/stylus/bordered-pulled"
+//@import "../../../bower_components/font-awesome-stylus/stylus/spinning"
+//@import "../../../bower_components/font-awesome-stylus/stylus/rotated-flipped"
+//@import "../../../bower_components/font-awesome-stylus/stylus/stacked"
+@import "../../../bower_components/font-awesome-stylus/stylus/icons"
+
+
+.dialog
+  min-width:10em
+  display:block
+  display:inline-block
+
+  &.arrow-left
+    position:relative
+    border:none
+    height: 28px
+    .top
+      background-color:red
+      height:auto
+      width:5px
+      border:none
+      border-top:1px solid #ccc
+      border-bottom:1px solid #ccc
+      float: none
+      display: inline-block
+      position: absolute
+      top:0
+      left:10px
+      bottom:0
+      height: 28px
+    .content
+      border:1px solid #ccc
+      border-left:0
+      float: none
+      display: block
+      position: absolute
+      top:0
+      left:15px
+      right:0
+      bottom:0
+      height: 28px
+    
+  .arrow-up
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid #e6304c
+    margin:0
+    padding:0
+    float:none
+    margin:0 auto
+    &.right
+      float:right
+      margin-right:5%
+    &.left
+      float:left
+      margin-left:5%
+
+  .arrow-left
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-right:10px solid red
+    margin:0
+    padding:0
+    float: none
+    display: inline-block
+    position: absolute
+    top:0
+    left:0
+    bottom:0
+    margin-top:4px
+    margin-bottom:4px
+
+  .top
+    background-color:#e6304c
+    margin:0
+    padding:0
+    height:5px
+    clear:both
+    border-right:1px solid #ccc
+    border-left:1px solid #ccc
+
+  .content
+    border:1px solid #ccc
+    border-top:0
+    margin:0
+    padding:0.2em
+    text-align:left
+    background-color:#333
+    color:#ccc
+    font-family: 'Open Sans', sans-serif
+    font-size:14px
+    position:relative
+
+  .content i
+    margin:0 5px
+
+  .content .text
+    position:absolute
+    top:0
+    right:0
+    left:0
+    width:100%
+    bottom:0

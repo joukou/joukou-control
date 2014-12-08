@@ -1,0 +1,44 @@
+//- Copyright 2014 Joukou Ltd
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-   http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+//
+  joukou-header-bar(
+    htitle="Your solution" 
+    imagesrc="images/solutions-cover.jpg",
+    jumboclass="col-sm-offset-2 col-sm-6",
+    hash="solutions-heading-text")
+div(id='picture-header')
+  .jumbotron.header-image(style="background-image:url('images/solutions-cover.jpg')")
+    .container
+      .row
+        div.col-sm-offset-1.margin-top-8
+          | &nbsp;
+          //
+            h1 Your solution
+  div.container-seb-padding-119.header-nav-bottom
+    div.contact-help-search
+      img.img-24(src='images/contact button.png' ui-sref='contact')
+      //
+        img.img-24(src='images/help button.png')
+        img.img-24(src='images/search button.png')
+    div.first-column(ng-click="scrollTo('solutions-heading-text')")
+      img.img-39(src='images/push down button.png')
+    div.language
+      | &nbsp;
+      //
+        img.img-24(src='images/languages button.png')
+.container-seb-margin-184.text-group(id='solutions-heading-text')
+  .center-me
+    h1 Solutions
+    p Use our web-based data-repurposing tool to help your business mobilise, synchronise, affiliate, and monetise their data. Enjoy a simple approach for loading your data into Joukou, repurposing it, and then deploying it to where it needs to be.
+    p In a very visual way our interface allows for our tenants to convert, aggregate, filter, clean, merge and verify their data. Learn more about our specific solutions and core benefits.
