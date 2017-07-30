@@ -45,7 +45,7 @@ Joukou 2D and 3D control surfaces.
 ### Unit Tests
 
 * [Karma](http://karma-runner.github.io/0.12/index.html)
-* [Mocha](http://visionmedia.github.io/mocha/)
+* [Mocha](http://mochajs.org/)
 * [Chai](http://chaijs.com/)
 
 ### E2E Tests
